@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/git,pythonvanilla,python,firebase,venv,virtualenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,pythonvanilla,python,firebase,venv,virtualenv
 
-
+secrete/
 ~$I_Documentation.docx
 ~WRL3262.tmp
 
