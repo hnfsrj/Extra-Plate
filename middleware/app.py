@@ -11,7 +11,7 @@ from firebase_admin import auth, credentials, firestore
 app = Flask(__name__)
 
 
-host_address = "127.0.0.1"
+host_address = "192.168.141.181"
 
 
 cred = credentials.Certificate(r"C:\Users\semo\Desktop\Extra Plate\middleware\secrete\config.json")
@@ -44,8 +44,8 @@ def create():
     
     email = data['email']
     password = data['password']
-    longitude = data['longitude']    
-    latitude = data['latitude']
+    # longitude = data['longitude']    
+    # latitude = data['latitude']
 
     try:
         user = auth.create_user(
@@ -54,17 +54,25 @@ def create():
         )
 
 
-        doc_ref = db.collection("location").document(user.uid)
-        doc_ref.set({"longitude": longitude, "latitude": latitude})
+        # doc_ref = db.collection("location").document(user.uid)
+        # doc_ref.set({"longitude": longitude, "latitude": latitude})
 
 
-        id_token = auth.create_custom_token(user.uid).decode('UTF-8')
+        # id_token = auth.create_custom_token(user.uid).decode('UTF-8')
+        
+        user2 = auth.get_user_by_email(email)
+        id_token = user2.get_id_token()
 
-        response = make_response(jsonify({'msg':"success"}))
-        response.headers['Content-Type'] = 'application/json'
-        response.set_cookie('uid', id_token)  
+        print("this is the token:", id_token)
 
-        return response
+        # response = make_response(jsonify({'msg':"success"}))
+        # response.headers['Content-Type'] = 'application/json'
+        # response.set_cookie('uid', id_token)  
+
+
+
+        # return response
+        return "hey there man"
 
     except auth.EmailAlreadyExistsError:
         return jsonify({"msg":"Email already exists"})

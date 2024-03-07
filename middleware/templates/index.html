@@ -10,6 +10,33 @@
 
 {% block body %}
 
+    <div id="index_container" class = "flex">
+        <div class = "index_top flex">
+            <div class = "flex">
+                <p class = "title">Extra PLate</p>
+                <p class = "login_link in_create">Login</p>
+            </div>
+        </div>
 
-<script type="module" src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <div class = "index_mid flex">
+            <input class = "email" type="email" placeholder="Email Address">
+            <input class = "password" type="password" placeholder="Password">
+            <p class = "set_default_location in_create">Set Default Location</p>
+            <p class = "create_link in_login hide">Create Account</p>
+            <div class = "restaurant_registration flex in_create">
+                <p>Register as a restaurant/cafe</p>
+                <input type="checkbox">
+            </div>
+            <button class = "create_account_button button in_create">Create Account</button>
+            <button class = "login_button in_login button hide">Login</button>
+        </div>
+
+        <div class = "index_bottom">
+            <p>Privacy and Policy</p>
+        </div>
+
+    </div>
+
+<!-- <script src="{{ url_for('static', filename='dist/bundle.js') }}"></script> -->
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock %}
