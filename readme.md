@@ -8,4 +8,9 @@ you can change the host address in app.py by changing the variable named 'host' 
 
 the port is 5000
 
-<embed src="Extra Plate Face Lift.pdf" width="100%" height="600px" />
+
+![Alt text](images/home.png)
+
+
+![Alt text](images/delivery.png)
+
