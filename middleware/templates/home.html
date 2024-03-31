@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+<div id = 'home_container' class = 'flex'>
+
+    <div class = 'home_container_top flex'>
+        <div class = 'deliver_link'>Deliver</div>
+        <div class = 'menu'>
+            <div class = 'line'></div>
+            <div class = 'line'></div>
+            <div class = 'line'></div>
+        </div>
+    </div>
+
+
+    <div class = 'home_container_mid'>
+        <div class = "msg hide"></div>
+        <div class = "extra_plate">
+            <p>I have</p>
+            <p>Extra Plate</p>
+        </div>
+
+        <div class = 'location_choice'>
+            <p class = 'choice_default_location'>Default Location</p>
+            <p class = 'choice_manual_location'>Set Location Manually</p>
+        </div>
+    </div>
+
+    <div class = 'home_container_bottom'>
+        <p class = 'count'></p>
+        <p> Plates</p>
+        <p>Served in Total.</p>
+    </div>
+
+
+
+
+
+
+</div>
+   
+
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

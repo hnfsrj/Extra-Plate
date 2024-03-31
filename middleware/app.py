@@ -37,6 +37,9 @@ def index():
         # return jsonify({'msg':'index'})
         
 
+@app.route('/home', methods = ['GET'])
+def home():
+    return render_template('home.html')
 
 @app.route('/create', methods = ['POST'])
 def create():
