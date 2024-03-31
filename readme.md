@@ -9,7 +9,8 @@ you can change the host address in app.py by changing the variable named 'host' 
 the port is 5000
 
 
-<div style="display: flex;">
-    <img src="./images/home.jpg" alt="home" style="width: 50%;">
-    <img src="./images/delivery.jpg" alt="delivery" style="width: 50%;">
-</div>
+![home](./images/home.jpg)
+
+
+![delivery](./images/delivery.jpg)
+
